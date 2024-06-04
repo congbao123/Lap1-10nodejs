@@ -9,6 +9,7 @@ document.querySelector("#xhr").addEventListener("click", () => {
     log.textContent = `${log.textContent}Finished with status: ${xhr.status}`;
   });
 
+  
   xhr.open(
     "GET",
     "https://raw.githubusercontent.com/mdn/content/main/files/en-us/_wikihistory.json",
@@ -21,3 +22,4 @@ document.querySelector("#reload").addEventListener("click", () => {
   log.textContent = "";
   document.location.reload();
 });
+    
