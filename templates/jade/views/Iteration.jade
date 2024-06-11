@@ -1,0 +1,33 @@
+
+// Example of iterating over an array
+ul
+  each val in [1, 2, 3, 4, 5]
+    li= val
+
+// Example of iterating over an array with index
+ul
+  each val, index in ['zero', 'one', 'two']
+    li= index + ': ' + val
+
+// Example of iterating over the keys in an object
+ul
+  each val, index in {1:'one', 2:'two', 3:'three'}
+    li= index + ': ' + val
+
+// Example of iterating over a variable or result of a function call
+- var values = [];
+ul
+  each val in values.length ? values : ['There are no values']
+    li= val
+
+// Example using 'for' as an alias of 'each'
+- var fruits = ['Apple', 'Banana', 'Orange'];
+ul
+  for fruit in fruits
+    li= fruit
+
+// Example of using 'while' loop
+- var n = 0
+ul
+  while n < 4
+    li= n++
